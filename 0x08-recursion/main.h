@@ -10,6 +10,7 @@ int sqrt_helper(int n, int start, int end);
 int is_prime_number(int n);
 int check_prime(int n, int divisor);
 int is_palindrome(char *s);
+check_palindrome(char *s, int start, int end);
 int wildcmp(char *s1, char *s2);
 
 
