@@ -17,7 +17,7 @@ if (n == 0 || n == 1)
 {
 return (n);
 }
-return (sqrt_helper(n, 1, n));
+return (sqrt_helper(n, 1, n / 2));
 }
 /**
  * sqrt_helper - Finds the square root of a number using binary search.
