@@ -11,11 +11,11 @@
 */
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int i;
+unsigned int no;
 
-for (i = 0; i < n; i++)
+for (no = 0; no < n; no++)
 {
-s[i] = b;
+s[no] = b;
 }
 
 return (s);
@@ -40,10 +40,7 @@ ptr = malloc(size * nmemb);
 if (ptr == NULL)
 return (NULL);
 
-for (unsigned int i = 0; i < nmemb * size; i++)
-{
-ptr[i] = 0;
-}
+_memset(ptr, 0, nmemb * size);
 
 return (ptr);
 }
