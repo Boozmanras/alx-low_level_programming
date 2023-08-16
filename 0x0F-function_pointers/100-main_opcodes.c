@@ -8,14 +8,16 @@
 *
 * Return: 0 on success, or an error code.
 */
+
 int main(int argc, char *argv[])
 {
-int bytes;
+int bytes, i;
+char *arr;
 
 if (argc != 2)
 {
 printf("Error\n");
-return (1);
+exit(1);
 }
 
 bytes = atoi(argv[1]);
@@ -23,18 +25,19 @@ bytes = atoi(argv[1]);
 if (bytes < 0)
 {
 printf("Error\n");
-return (2);
+exit(2);
 }
 
-/* Print opcodes of the main function */
-unsigned char *main_addr = (unsigned char *)&main;
-for (int i = 0; i < bytes; i++)
+arr = (char *)main;
+
+for (i = 0; i < bytes; i++)
 {
-printf("%02x", main_addr[i]);
-if (i != bytes - 1)
-printf(" ");
+if (i == bytes - 1)
+{
+printf("%02hhx\n", arr[i]);
+break;
 }
-printf("\n");
-
+printf("%02hhx ", arr[i]);
+}
 return (0);
 }
