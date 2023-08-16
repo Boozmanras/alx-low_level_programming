@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
 * get_op_func - Returns the corresponding function based on the operator.
@@ -7,7 +8,7 @@
 *
 * Return: A pointer to the corresponding function, or NULL if not found.
 */
-get_op_func_t get_op_func(char *s)
+get_op_func(char *s)
 {
 if (s[1] == '\0')
 {
