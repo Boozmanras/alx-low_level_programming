@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include "lists.h"
 
@@ -28,7 +26,10 @@ free(new_node);
 return (NULL);
 }
 
-new_node->len = strlen(new_node->str);
+unsigned int len = 0;
+while (str[len])
+len++;
+new_node->len = len;
 new_node->next = *head;
 *head = new_node;
 
