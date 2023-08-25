@@ -29,7 +29,7 @@ free(new_node);
 return (NULL);
 }
 
-new_node->len = strlen(str++); // Calculate the correct length
+new_node->len = strlen(str++);
 new_node->next = *head;
 *head = new_node;
 
