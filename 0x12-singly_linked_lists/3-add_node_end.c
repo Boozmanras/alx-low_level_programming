@@ -22,66 +22,34 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
+list_t *new_node;
 list_t *current = *head;
+unsigned int pos = 0;
 
-list_t *new_node = (list_t *)malloc(sizeof(list_t));
-if (new_node == NULL)
+if (str == NULL)
+return (NULL);
+
+while (str[pos])
+pos++;
+
+new_node = malloc(sizeof(list_t));
+if (!new_node)
 return (NULL);
 
 new_node->str = strdup(str);
-if (new_node->str == NULL)
-{
-free(new_node);
-return (NULL);
-}
-
-new_node->len = strlen(new_node->str);
+new_node->len = pos;
 new_node->next = NULL;
 
 if (*head == NULL)
 {
 *head = new_node;
-}
-else
-{
-while (current->next != NULL)
-{
-current = current->next;
-}
-current->next = new_node;
-}
-
 return (new_node);
 }
 
+while (current->next)
+current = current->next;
 
-list_t *add_node_end(list_t **head, const char *str)
-{
-list_t *new;
-list_t *temp = *head;
-unsigned int len = 0;
+current->next = new_node;
 
-while (str[len])
-len++;
-
-new = malloc(sizeof(list_t));
-if (!new)
-return (NULL);
-
-new->str = strdup(str);
-new->len = len;
-new->next = NULL;
-
-if (*head == NULL)
-{
-*head = new;
-return (new);
-}
-
-while (temp->next)
-temp = temp->next;
-
-temp->next = new;
-
-return (new);
+return (new_node);
 }
