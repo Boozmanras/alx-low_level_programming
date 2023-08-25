@@ -8,20 +8,19 @@
 * @str: String to be duplicated and added as data of the new node
 *
 * Return: Address of the new element (node), or NULL if it failed
-*/
+**/
 list_t *add_node(list_t **head, const char *str)
 {
-list_t *new;
+list_t *new_node;
+unsigned int pos = 0;
 
-if (str == NULL)
-{
+while (str[pos])
+pos++;
+
+new_node = malloc(sizeof(list_t));
+if (!new_node)
 return (NULL);
-}
-list_t *new_node = (list_t *)malloc(sizeof(list_t));
-if (new_node == NULL)
-{
-return (NULL);
-}
+
 new_node->str = strdup(str);
 if (new_node->str == NULL)
 {
@@ -29,9 +28,9 @@ free(new_node);
 return (NULL);
 }
 
-new_node->len = strlen(str++);
+new_node->len = pos;
 new_node->next = *head;
 *head = new_node;
 
-return (new_node);
+return (*head);
 }
