@@ -1,14 +1,13 @@
-#include "function_pointers.h"
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include "3-calc.h"
-
 /**
-* main - Entry point of the program.
-* @argc: The number of command-line arguments.
-* @argv: An array containing the command-line arguments.
+* main - Displays the outcome of basic operations.
+* @argc: Number of arguments provided to the program.
+* @argv: Array of pointers to the arguments.
 *
-* Return: 0 on success, or an error code.
+* Return: Always 0.
 */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {

@@ -2,13 +2,12 @@
 #include <stdlib.h>
 
 /**
-* main - Entry point of the program.
-* @argc: The number of command-line arguments.
-* @argv: An array containing the command-line arguments.
+* main - Displays the opcodes of the program itself
+* @argc: Number of command-line arguments
+* @argv: Array of command-line arguments
 *
-* Return: 0 on success, or an error code.
+* Return: Always 0 (Success)
 */
-
 int main(int argc, char *argv[])
 {
 int bytes, i;

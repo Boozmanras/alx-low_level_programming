@@ -6,37 +6,34 @@ int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
 
-
 /**
-* op_add - Returns the sum of two integers.
-* @a: The first integer.
-* @b: The second integer.
+* op_add - Provides the result of adding two numbers.
+* @a: The initial number.
+* @b: The second number.
 *
-* Return: The sum of the two integers.
+* Return: The sum of a and b.
 */
 int op_add(int a, int b)
 {
 return (a + b);
 }
-
 /**
-* op_sub - Returns the difference of two integers.
-* @a: The first integer.
-* @b: The second integer.
+* op_sub - Provides the result of subtracting one number from another.
+* @a: The initial number.
+* @b: The second number.
 *
-* Return: The difference of the two integers.
+* Return: The difference between a and b.
 */
 int op_sub(int a, int b)
 {
 return (a - b);
 }
-
 /**
-* op_mul - Returns the product of two integers.
-* @a: The first integer.
-* @b: The second integer.
+* op_mul - Yields the result of dividing two numbers.
+* @a: The initial number.
+* @b: The second number.
 *
-* Return: The product of the two integers.
+* Return: The quotient of a divided by b.
 */
 int op_mul(int a, int b)
 {
@@ -44,23 +41,22 @@ return (a * b);
 }
 
 /**
-* op_div - Returns the result of integer division.
-* @a: The dividend.
-* @b: The divisor.
+* op_div - Provides the remainder resulting from the division of two numbers.
+* @a: The initial number.
+* @b: The second number.
 *
-* Return: The result of integer division.
+* Return: The division of the division of a by b.
 */
 int op_div(int a, int b)
 {
 return (a / b);
 }
-
 /**
-* op_mod - Returns the remainder of integer division.
-* @a: The dividend.
-* @b: The divisor.
+* op_mod - Provides the remainder resulting from the division of two numbers.
+* @a: The initial number.
+* @b: The second number.
 *
-* Return: The remainder of integer division.
+* Return: The remainder of the division of a by b.
 */
 int op_mod(int a, int b)
 {
