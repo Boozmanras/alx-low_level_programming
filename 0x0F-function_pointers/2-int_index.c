@@ -1,10 +1,9 @@
 #include "function_pointers.h"
 /**
-* int_index - returns the index if the comparison is true, otherwise -1
-* @array: array to be evaluated
-* @size: size of elements in the array
-* @cmp: pointer to a function selected
-* from one of the three functions in the main program
+* int_index - return index place if comparison = true, else -1
+* @array: array
+* @size: size of elements in array
+* @cmp: pointer to func of one of the 3 in main
 * Return: 0
 */
 int int_index(int *array, int size, int (*cmp)(int))
